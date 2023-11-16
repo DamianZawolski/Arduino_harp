@@ -1,7 +1,5 @@
 #include "thingProperties.h"
 #include <SoftwareSerial.h>
-//#include <TMRpcm.h>
-#include <MD_YX5300.h>
 
 #define PR_PIN 0
 
