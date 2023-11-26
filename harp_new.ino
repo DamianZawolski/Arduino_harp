@@ -283,62 +283,62 @@ void loop() {
     if (wybrana_struna + wybrana_tonacja == 1)
     {
       komenda_MP3(0x0F, 0x0301);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja G3)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja G3 bęben basowy)";
     }
     else if (wybrana_struna + wybrana_tonacja == 2)
     {
       komenda_MP3(0x0F, 0x0302);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja A3)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja A3 werbel)";
     }
     else if (wybrana_struna + wybrana_tonacja == 3)
     {
       komenda_MP3(0x0F, 0x0303);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja B3)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja B3 werbel (cross stick))";
     }
     else if (wybrana_struna + wybrana_tonacja == 4)
     {
-      komenda_MP3(0x0F, 0x0304);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja C4)";
+      komenda_MP3(0x0F, 0x0304); 
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja C4 hi-hat (zamknięty))";
     }
     else if (wybrana_struna + wybrana_tonacja == 5)
     {
       komenda_MP3(0x0F, 0x0305);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja D4)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja D4 hi-hat (otwarty))";
     }
     else if (wybrana_struna + wybrana_tonacja == 6)
     {
       komenda_MP3(0x0F, 0x0306);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja F4)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja F4 wysoki tom-tom)";
     }
     else if (wybrana_struna + wybrana_tonacja == 7)
     {
       komenda_MP3(0x0F, 0x0307);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja A4)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja A4 floor tom)";
     }
     else if (wybrana_struna + wybrana_tonacja == 8)
     {
       komenda_MP3(0x0F, 0x0308);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja B4)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja B4 talerz)";
     }
     else if (wybrana_struna + wybrana_tonacja == 9)
     {
       komenda_MP3(0x0F, 0x0309);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja C5)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja C5 talerz crash)";
     }
     else if (wybrana_struna + wybrana_tonacja == 10)
     {
       komenda_MP3(0x0F, 0x030A);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja E5)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja E5 Hi hat)";
     }
     else if (wybrana_struna + wybrana_tonacja == 11)
     {
       komenda_MP3(0x0F, 0x030B);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja F5)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja F5 Hi hat)";
     }
     else if (wybrana_struna + wybrana_tonacja == 12)
     {
       komenda_MP3(0x0F, 0x030C);
-      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja A5)";
+      tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja A5 bell)";
     }
   }
   //gitara
