@@ -58,7 +58,7 @@ void setup() {
   pinMode(sensor7, INPUT);
   pinMode(sensor8, INPUT);
   digitalWrite(laser, HIGH);
-  wybrany_instrument = 1;
+  wybrany_instrument = 0;
 
   Serial.begin(9600);
   mp3.begin(9600);
