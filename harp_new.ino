@@ -54,6 +54,9 @@ void setup() {
   pinMode(sensor3, INPUT);
   pinMode(sensor4, INPUT);
   pinMode(sensor5, INPUT);
+  pinMode(sensor6, INPUT);
+  pinMode(sensor7, INPUT);
+  pinMode(sensor8, INPUT);
   digitalWrite(laser, HIGH);
   wybrany_instrument = 1;
 
@@ -80,10 +83,10 @@ void loop() {
   int wartosc_potencjometr_tonacja = analogRead(potencjometr_tonacja);
   wybrana_glosnosc = map(wartosc_potencjometr_glosnosc, 0, 1000, 0, 10);
   wybrana_tonacja = map(wartosc_potencjometr_tonacja, 0, 1000, 0, 4);
-  int wybrana_struna;
+  int wybrana_struna = 0;
   if (wcisniecie_przycisku == LOW) {
-    if (wybrany_instrument > 3) {
-      wybrany_instrument = 1;
+    if (wybrany_instrument > 2) {
+      wybrany_instrument = 0;
     }
     else {
       wybrany_instrument++;
@@ -154,6 +157,7 @@ void loop() {
   
   //harfa
   if (wybrany_instrument == 0){
+    if (wybrana_struna != 0){
     if (wybrana_struna + wybrana_tonacja == 1)
     {
       komenda_MP3(0x0F, 0x0101);
@@ -213,10 +217,11 @@ void loop() {
     {
       komenda_MP3(0x0F, 0x010C);
       tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(harfa A6)";
-    }
+    }}
   }
   //fortepian
   else if (wybrany_instrument == 1){
+    if (wybrana_struna != 0){
     if (wybrana_struna + wybrana_tonacja == 1)
     {
       komenda_MP3(0x0F, 0x0201);
@@ -276,10 +281,11 @@ void loop() {
     {
       komenda_MP3(0x0F, 0x020C);
       tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(fortepian A6)";
-    }
+    }}
   }
    //gitara
   else if (wybrany_instrument == 2){
+    if (wybrana_struna != 0){
     if (wybrana_struna + wybrana_tonacja == 1)
     {
       
@@ -340,10 +346,11 @@ void loop() {
     {
       komenda_MP3(0x0F, 0x030C);
       tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(gitara A6)";
-    }
+    }}
   }
   //perkusja
   else if (wybrany_instrument == 3){
+    if (wybrana_struna != 0){
     if (wybrana_struna + wybrana_tonacja == 1)
     {
       komenda_MP3(0x0F, 0x0401);
@@ -403,7 +410,7 @@ void loop() {
     {
       komenda_MP3(0x0F, 0x040C);
       tekst_IOT = "Gra struna numer " + String(wybrana_struna) +"(perkusja A5 bell)";
-    }
+    }}
   }
 
   delay(100);
