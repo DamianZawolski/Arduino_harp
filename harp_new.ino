@@ -8,9 +8,9 @@
 #define sensor3 2
 #define sensor4 3
 #define sensor5 4
-#define sensor6 5
-#define sensor7 6
-#define sensor8 7
+//#define sensor6 5
+//#define sensor7 6
+//#define sensor8 7
 #define laser 8
 #define button 11
 SoftwareSerial mp3(9, 10);
@@ -54,9 +54,9 @@ void setup() {
   pinMode(sensor3, INPUT);
   pinMode(sensor4, INPUT);
   pinMode(sensor5, INPUT);
-  pinMode(sensor6, INPUT);
-  pinMode(sensor7, INPUT);
-  pinMode(sensor8, INPUT);
+  //pinMode(sensor6, INPUT);
+  //pinMode(sensor7, INPUT);
+  //pinMode(sensor8, INPUT);
   digitalWrite(laser, HIGH);
   wybrany_instrument = 0;
 
@@ -76,13 +76,13 @@ void loop() {
   bool wartosc_lasera_3 = digitalRead(sensor3);
   bool wartosc_lasera_4 = digitalRead(sensor4);
   bool wartosc_lasera_5 = digitalRead(sensor5);
-  bool wartosc_lasera_6 = digitalRead(sensor6);
-  bool wartosc_lasera_7 = digitalRead(sensor7);
-  bool wartosc_lasera_8 = digitalRead(sensor8);
+  //bool wartosc_lasera_6 = digitalRead(sensor6);
+  //bool wartosc_lasera_7 = digitalRead(sensor7);
+  //bool wartosc_lasera_8 = digitalRead(sensor8);
   int wartosc_potencjometr_glosnosc = analogRead(potencjometr_glosnosc);
   int wartosc_potencjometr_tonacja = analogRead(potencjometr_tonacja);
   wybrana_glosnosc = map(wartosc_potencjometr_glosnosc, 0, 1000, 0, 10);
-  wybrana_tonacja = map(wartosc_potencjometr_tonacja, 0, 1000, 0, 4);
+  wybrana_tonacja = map(wartosc_potencjometr_tonacja, 0, 1000, 0, 7);
   int wybrana_struna = 0;
   if (wcisniecie_przycisku == LOW) {
     if (wybrany_instrument > 2) {
@@ -145,15 +145,15 @@ void loop() {
   else if (wartosc_lasera_5 == 0) {
       wybrana_struna = 5;
     }
-  else if (wartosc_lasera_6 == 0) {
-      wybrana_struna = 6;
-    }
-  else if (wartosc_lasera_7 == 0) {
-      wybrana_struna = 7;
-    }
-  else if (wartosc_lasera_8 == 0) {
-      wybrana_struna = 8;
-    }
+  //else if (wartosc_lasera_6 == 0) {
+  //    wybrana_struna = 6;
+  //  }
+  //else if (wartosc_lasera_7 == 0) {
+  //    wybrana_struna = 7;
+  //  }
+  //else if (wartosc_lasera_8 == 0) {
+  //    wybrana_struna = 8;
+  //  }
   
   //harfa
   if (wybrany_instrument == 0){
@@ -446,12 +446,12 @@ void loop() {
   Serial.print(wartosc_lasera_4);
   Serial.print(" 5:");
   Serial.print(wartosc_lasera_5);
-  Serial.print(" 6:");
-  Serial.print(wartosc_lasera_6);
-  Serial.print(" 7:");
-  Serial.print(wartosc_lasera_7);
-  Serial.print(" 8:");
-  Serial.print(wartosc_lasera_8);
+  //Serial.print(" 6:");
+  //Serial.print(wartosc_lasera_6);
+  //Serial.print(" 7:");
+  //Serial.print(wartosc_lasera_7);
+  //Serial.print(" 8:");
+  //Serial.print(wartosc_lasera_8);
   Serial.println(")");
   Serial.println("");
   Serial.println("");
