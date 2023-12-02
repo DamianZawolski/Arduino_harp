@@ -82,7 +82,7 @@ void loop() {
   int wartosc_potencjometr_glosnosc = analogRead(potencjometr_glosnosc);
   int wartosc_potencjometr_tonacja = analogRead(potencjometr_tonacja);
   wybrana_glosnosc = map(wartosc_potencjometr_glosnosc, 0, 1000, 0, 10);
-  wybrana_tonacja = map(wartosc_potencjometr_tonacja, 0, 1000, 0, 7);
+  wybrana_tonacja = map(wartosc_potencjometr_tonacja, 0, 1001, 0, 7);
   int wybrana_struna = 0;
   if (wcisniecie_przycisku == LOW) {
     if (wybrany_instrument > 2) {
@@ -130,28 +130,28 @@ void loop() {
     glosnosc = wybrana_glosnosc;
   }
   //wybór struny
-  if (wartosc_lasera_1 == 0) {
+  if (wartosc_lasera_1 == 1) {
       wybrana_struna = 1;
     }
-  else if (wartosc_lasera_2 == 0) {
+  else if (wartosc_lasera_2 == 1) {
       wybrana_struna = 2;
     }
-  else if (wartosc_lasera_3 == 0) {
+  else if (wartosc_lasera_3 == 1) {
       wybrana_struna = 3;
     }
-  else if (wartosc_lasera_4 == 0) {
+  else if (wartosc_lasera_4 == 1) {
       wybrana_struna = 4;
     }
-  else if (wartosc_lasera_5 == 0) {
+  else if (wartosc_lasera_5 == 1) {
       wybrana_struna = 5;
     }
-  //else if (wartosc_lasera_6 == 0) {
+  //else if (wartosc_lasera_6 == 1) {
   //    wybrana_struna = 6;
   //  }
-  //else if (wartosc_lasera_7 == 0) {
+  //else if (wartosc_lasera_7 == 1) {
   //    wybrana_struna = 7;
   //  }
-  //else if (wartosc_lasera_8 == 0) {
+  //else if (wartosc_lasera_8 == 1) {
   //    wybrana_struna = 8;
   //  }
   
