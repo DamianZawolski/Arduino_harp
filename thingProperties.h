@@ -19,9 +19,9 @@ void initProperties(){
 
   ArduinoCloud.setBoardId(DEVICE_LOGIN_NAME);
   ArduinoCloud.setSecretDeviceKey(DEVICE_KEY);
-  ArduinoCloud.addProperty(tekst_IOT, READ, ON_CHANGE, NULL);
+  ArduinoCloud.addProperty(tekst_IOT, READ, 1 * SECONDS, NULL);
   ArduinoCloud.addProperty(wybrana_glosnosc, READ, 1 * SECONDS, NULL);
-  ArduinoCloud.addProperty(wybrana_tonacja, READ, ON_CHANGE, NULL);
+  ArduinoCloud.addProperty(wybrana_tonacja, READ, 1 * SECONDS, NULL);
   ArduinoCloud.addProperty(wybrany_instrument, READ, 1 * SECONDS, NULL);
 
 }
